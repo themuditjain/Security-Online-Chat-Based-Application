@@ -1,0 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Architects+Daughter&family=Fredoka+One&family=Hina+Mincho&family=Indie+Flower&family=Nunito:ital,wght@0,300;1,900&family=Pacifico&family=Permanent+Marker&family=Rampart+One&family=Sigmar+One&display=swap");
+@import "./defaults.scss";
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(115deg, $top-Body, $bottom-Body);
+  font-family: $Text-Font;
+  color: $Text-color;
+}
+
+.Main {
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 10rem;
+
+  .heading {
+    padding-bottom: 65px;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Rampart One";
+  }
+  .inp {
+    position: relative;
+    margin-bottom: 10px;
+    input {
+      height: 100%;
+      width: 100%;
+
+      font-size: 20px;
+      margin-top: 25px;
+      text-overflow: unset;
+      padding: 0px;
+      outline: none;
+      border: none;
+      background: none;
+      width: 25rem;
+    }
+    label {
+      position: absolute;
+
+      height: 100%;
+      width: 100%;
+      left: 0px;
+      // bottom: 5px;
+      pointer-events: none;
+      border-bottom: solid black 1px;
+
+      &::after {
+        content: "";
+        height: 100%;
+        width: 100%;
+        bottom: 0px;
+        left: 0%;
+        position: absolute;
+        border-bottom: solid $glowingBlue 2px;
+        overflow: hidden;
+      }
+      .content {
+        position: absolute;
+        left: 1px;
+        bottom: 5px;
+        transition: all 0.3s ease;
+      }
+    }
+    input:focus + label .content,
+    input:valid + label .content {
+      transform: translateY((-110%));
+      color: $darkBlue;
+      font-size: 14px;
+    }
+  }
+
+  .button {
+    margin-top: 55px;
+    align-items: center;
+    input {
+      height: 100%;
+      width: 100%;
+      border: none;
+      padding: 5px;
+      border-radius: 90px;
+      font-weight: 500;
+      font-size: 30px;
+      font-family: "Nunito";
+      color: wheat;
+      background-color: rgb(187, 124, 212);
+      outline: none;
+      transition: all 150ms ease-in;
+      &:hover {
+        background-color: rgba(134, 54, 209, 0.856);
+        color: rgb(238, 216, 178);
+      }
+    }
+  }
+}

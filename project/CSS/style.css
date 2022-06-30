@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Architects+Daughter&family=Fredoka+One&family=Hina+Mincho&family=Indie+Flower&family=Nunito:ital,wght@0,300;1,900&family=Pacifico&family=Permanent+Marker&family=Rampart+One&family=Sigmar+One&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  height: 100vh;
+  background-image: linear-gradient(115deg, #f75a5a, #cf58ab);
+  font-family: "Hina Mincho";
+  color: rgba(17, 10, 15, 0.726);
+}
+
+.Main {
+  display: block;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 10rem;
+}
+
+.Main .heading {
+  padding-bottom: 65px;
+  font-size: 50px;
+  text-align: center;
+  font-family: "Rampart One";
+}
+
+.Main .inp {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.Main .inp input {
+  height: 100%;
+  width: 100%;
+  font-size: 20px;
+  margin-top: 25px;
+  text-overflow: unset;
+  padding: 0px;
+  outline: none;
+  border: none;
+  background: none;
+  width: 25rem;
+}
+
+.Main .inp label {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0px;
+  pointer-events: none;
+  border-bottom: solid black 1px;
+}
+
+.Main .inp label::after {
+  content: "";
+  height: 100%;
+  width: 100%;
+  bottom: 0px;
+  left: 0%;
+  position: absolute;
+  border-bottom: solid #03dddd 2px;
+  overflow: hidden;
+}
+
+.Main .inp label .content {
+  position: absolute;
+  left: 1px;
+  bottom: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.Main .inp input:focus + label .content,
+.Main .inp input:valid + label .content {
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
+  color: #3b3bfd;
+  font-size: 14px;
+}
+
+.Main .button {
+  margin-top: 55px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.Main .button input {
+  height: 100%;
+  width: 100%;
+  border: none;
+  padding: 5px;
+  border-radius: 90px;
+  font-weight: 500;
+  font-size: 30px;
+  font-family: "Nunito";
+  color: wheat;
+  background-color: #bb7cd4;
+  outline: none;
+  -webkit-transition: all 150ms ease-in;
+  transition: all 150ms ease-in;
+}
+
+.Main .button input:hover {
+  background-color: rgba(134, 54, 209, 0.856);
+  color: #eed8b2;
+}
+/*# sourceMappingURL=style.css.map */

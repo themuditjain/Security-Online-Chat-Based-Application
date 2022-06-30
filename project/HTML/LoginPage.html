@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../CSS/style.css" />
+
+    <title>User Sign in</title>
+  </head>
+  <body>
+    <script defer src="../JS/validation.js"></script>
+    <div class="Main">
+      <div class="heading">LOGIN</div>
+      <form action="/LoginPage.html" method="GET">
+        <div class="inp">
+          <input
+            type="text"
+            name="name"
+            id="Name"
+            autocomplete="off"
+            required
+          />
+          <label class="Label">
+            <div class="content">Username</div>
+          </label>
+        </div>
+
+        <div class="inp">
+          <input
+            type="password"
+            name="pass"
+            id="Pass"
+            autocomplete="off"
+            required
+          />
+          <label class="Label"><div class="content">Password</div></label>
+        </div>
+
+        <div class="button">
+          <input
+            type="submit"
+            action="www.google.com"
+            value="LOG IN"
+            onclick="validate()"
+          />
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
